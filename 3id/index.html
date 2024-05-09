@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template JS - primi esempi</title>
-    <link rel="stylesheet" href="./stile.css" type="text/css"/>
+    <title>Template Js</title>
+    <link rel="stylesheet" href="./stile.css" type="text/css">
 </head>
 <body>
-    <input type="number" id="A" />
-    <input type="number" id="B" />
-    <select id="segno">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select>
-    <input type="button" onclick="mostraContenutoCasellaA()" value="Clicca">    
-
-    <script src="./script.js">//codice JS non verrà interpretato</script>
+    <div>
+        <p>Calcolatrice</p>
+        <input type="number" id="A" placeholder="Inserire qui il fattore 1"/> <!-- caselle di testo -->
+        <input type="number" id="B" placeholder="Inserire qui il fattore 2"/>
+        <select id="segno">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="button" onclick="calcolatrice()" value="Clicca"/> <!-- Assegno ad lo schiaccio la funzione -->
+        <input type="reset" onclick="cancella()" value="Resetta"/>
+    </div>
+    <div>
+        <p>Test Regex</p>
+        <input type="text" id="String" placeholder="Inserire qui la stringa"/>
+        <input type="text" id="Regex" placeholder="Inserire qui la regex"/>
+        < input type="button" onclick="testRegex()" value="Clicca"/> <!-- Assegno ad lo schiaccio la funzione -->
+        <input type="reset" onclick="cancella2()" value="Resetta"/>
+    </div>
+    <script src="./script.js">//codice Js non verrà interpretato se avrà src</script>
 </body>
+<!-- Installa Live Server poi go live -->
 </html>
+<!-- Dom=Documento -->
