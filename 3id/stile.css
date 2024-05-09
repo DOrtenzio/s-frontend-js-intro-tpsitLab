@@ -1,5 +1,21 @@
-input {
+input{ 
     height: 50px;
-    border: 2px solid cyan;
-    border-radius: 10px;
+    border: 2px solid blue;
+    border-radius: 4px;
+    background-color: black;
+    text-align: center;
+    color: aquamarine;
+}
+select{ 
+    height: 50px;
+    width: 55px;
+    border: 2px solid blue;
+    border-radius: 4px;
+    background-color: black;
+    text-align: center;
+    color: aquamarine;
+}
+body{
+    background-color: bisque;
+    text-align: center;
 }
