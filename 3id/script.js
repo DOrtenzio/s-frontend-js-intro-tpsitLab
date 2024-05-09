@@ -1,11 +1,16 @@
+//Funzione Generale
+function testCampo(stringa, pattern) {
+    return new RegExp(pattern).test(stringa);
+}
+
 //Funzione 1 = Calcolatrice
 function calcolatrice(){
     const casellaA=document.getElementById("A");
     const casellaB=document.getElementById("B");
     const segno=document.getElementById("segno").value;
-    let n=parseFloat(casellaA.value);
-    let n2=parseFloat(casellaB.value);
-    if(testIntero){
+    let n=parseInt(casellaA.value);
+    let n2=parseInt(casellaB.value);
+    if(testIntero()){
         switch(segno){
             case "+":
                 alert("Il risultato della somma dei due fattori è: "+(n+n2));
@@ -29,6 +34,11 @@ function calcolatrice(){
         alert("Input non valido");
     } 
 }
+function testIntero() {
+    let testA=testCampo(document.getElementById("A").value,"^[0-9]+$");
+    let testB=testCampo(document.getElementById("B").value,"^[0-9]+$");
+    return testA && testB;
+}
 function cancella(){
     let text;
     if (confirm("Sei sicuro") == true) {
@@ -41,17 +51,6 @@ function cancella(){
     }
     alert(text);
 }
-function testCampo(stringa, pattern) {
-    return new RegExp(pattern).test(stringa);
-}
-function testIntero() {
-    let testA=testCampo(document.getElementById("A").value,"^[0-9]+$");
-    let testB=testCampo(document.getElementById("B").value,"^[0-9]+$");
-    if (!testA || !testB)
-        return false;
-    else
-        return true;
-} 
 
 //Funzione 2
 function testRegex() {
