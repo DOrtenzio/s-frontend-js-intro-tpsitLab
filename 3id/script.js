@@ -5,25 +5,29 @@ function calcolatrice(){
     const segno=document.getElementById("segno").value;
     let n=parseFloat(casellaA.value);
     let n2=parseFloat(casellaB.value);
-    switch(segno){
-        case "+":
-            alert("Il risultato della somma dei due fattori è: "+(n+n2));
-            break;
-        case "-":
-            alert("Il risultato della differenza fra i due fattori è: "+(n-n2));
-            break;
-        case "*":
-            alert("Il risultato del prodotto dei due fattori è: "+(n*n2));
-            break;
-        case "/":
-            if(n==0 && n2==0)
-                alert("Indeterminato");
-            else if(n2==0)
-                alert("Impossibile");
-            else
-                alert("Il risultato della divisione del fattore uno sul secondo fattore è: "+(n/n2));
-            break;
-    }
+    if(testIntero){
+        switch(segno){
+            case "+":
+                alert("Il risultato della somma dei due fattori è: "+(n+n2));
+                break;
+            case "-":
+                alert("Il risultato della differenza fra i due fattori è: "+(n-n2));
+                break;
+            case "*":
+                alert("Il risultato del prodotto dei due fattori è: "+(n*n2));
+                break;
+            case "/":
+                if(n==0 && n2==0)
+                    alert("Indeterminato");
+                else if(n2==0)
+                    alert("Impossibile");
+                else
+                    alert("Il risultato della divisione del fattore uno sul secondo fattore è: "+(n/n2));
+                break;
+        }
+    }else{
+        alert("Input non valido");
+    } 
 }
 function cancella(){
     let text;
